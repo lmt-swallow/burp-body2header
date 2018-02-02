@@ -25,12 +25,25 @@ echo '<br />Here\'s your new token: ' . $_SESSION['csrf-token'];
 ?>
 ```
 
-![Step 2](img/step2.png "Add to the scope from Target tab (This can be done in other tabs)")
-![Step 3, 4](img/step3-4.png "Set parameters to fetch a CSRF Token and send it in the HTTP header and enable/disable the extender separately for each tool")
-![Step 5](img/step5.1.png "Set a macro for test.php")
-![Step 5](img/step5.2.png "There's no need to set any parameters to override or fetch; it's automated")
-![When this extender is working](img/test01.png "When this extender is enabled")
+|![Step 2](img/step2.png "Add to the scope from Target tab (This can be done in other tabs)")|
+|:--:|
+|2: Add to the scope from Target tab (This can be done in other tabs)|
 
+|![Step 3, 4](img/step3-4.png "Set parameters to fetch a CSRF Token and send it in the HTTP header and enable/disable the extender separately for each tool")|
+|:--:|
+|3,4: Set parameters to fetch a CSRF Token and send it in the HTTP header and enable/disable the extender separately for each tool|
+
+|![Step 5](img/step5.1.png "Set a macro for test.php")|
+|:--:|
+|5(1): Set a macro for test.php|
+
+|![Step 5](img/step5.2.png "There's no need to set any parameters to override or fetch; it's automated")|
+|:--:|
+|5(2): There's no need to set any parameters to override or fetch; it's automated|
+
+|![When this extender is working](img/test01.png "When this extender is enabled")|
+|:--:|
+|When this extender is enabled|
 
 
 # Limitations
