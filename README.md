@@ -8,7 +8,7 @@
 2. Set the scope in which you want to send HTTP Header with CSRF Token by right-clicking in the Proxy tab or directly inputting regexp. (e.g. ```^https://shift-js.info:433/*``` . please make sure every scope includes a port.)
 3. Set the regexp which matches the source of CSRF Tokens of the website you're testing.
 4. If necessary, set the custom header name with which you want to send a token in the HTTP header.
-5. Set a macro which makes Burp to access to the source of the CSRF Token before accessing to the page you're testing.
+5. Set a macro which makes Burp to access to the source of the CSRF Token before accessing to the page you're testing. *NOTE* there's no need to configure parameter handling rules (see the images below).
 6. Have happy testing :-)
 
 Here's a sample for this PHP script put on https://shift-js.info/test/test.php (now this link is invalid):
