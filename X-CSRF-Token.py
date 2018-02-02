@@ -204,17 +204,17 @@ class BurpExtender(IBurpExtender, ITab, IHttpListener, AbstractTableModel, ICont
             128:  JCheckBox('Sequencer'),
             1024: JCheckBox('Extender')
         }
-        self._label_CSRF_regex_now_1 = JLabel("(1) Regex For Searching CSRF Token:")
+        self._label_CSRF_regex_now_1 = JLabel("(1) Regex For Searching CSRF Token: ")
         self._label_CSRF_regex_now_2 = JLabel(self._CSRF_source_regex.pattern)
         self._label_CSRF_regex = JLabel("(1) New Regex:")
         self._form_CSRF_regex = JTextField("<meta name=\"csrf-token\" content=\"(.*)\">",64)
         self._button_CSRF_regex = JButton('Update', actionPerformed=self.updateTokenSourceRegex)        
-        self._label_CSRF_header_now_1 = JLabel("(2) Header for CSRF Token:")
+        self._label_CSRF_header_now_1 = JLabel("(2) Header for CSRF Token: ")
         self._label_CSRF_header_now_2 = JLabel(self._header_name)        
-        self._label_CSRF_header = JLabel("(2) New Header Name:")
+        self._label_CSRF_header = JLabel("(2) New Header Name: ")
         self._form_CSRF_header = JTextField(self._header_name,64)
         self._button_CSRF_header = JButton('Update', actionPerformed=self.updateHeaderName)
-        self._label_add_url = JLabel("Add This URL:")
+        self._label_add_url = JLabel("(3) Add This URL: ")
         self._form_add_url = JTextField("", 64)
         self._button_add_url = JButton('Add', actionPerformed=self.addURLDirectly)
 
@@ -278,6 +278,6 @@ class ScopeInfo:
         self.url = url
         parsed_url = urlparse.urlparse(str(url))
         if regex == None:
-            self.regex = re.compile("^{0}://{1}{2}".format(parsed_url.scheme, parsed_url.netloc, parsed_url.path), re.MULTILINE)
+            self.regex = re.compile("^{0}://{1}{2}.*".format(parsed_url.scheme, parsed_url.netloc, parsed_url.path), re.MULTILINE)
         else:
             self.regex = regex
