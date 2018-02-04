@@ -5,7 +5,7 @@
 # How to use
 
 1. Install and enable this script with your Burp Suite Professional.
-2. Set the scope in which you want to send HTTP Header with CSRF Token by right-clicking in the Proxy tab or directly inputting regexp. (e.g. ```^https://shift-js.info:433/*``` . please make sure every scope includes a port.)
+2. Set the scope in which you want to send HTTP Header with CSRF Token by right-clicking in the some tabs or directly inputting regexp. (e.g. ```^https://shift-js.info:433/*``` . please make sure every scope includes a port.)
 3. Set the regexp which matches the source of CSRF Tokens of the website you're testing.
 4. If necessary, set the custom header name with which you want to send a token in the HTTP header.
 5. Set a macro which makes Burp to access to the source of the CSRF Token before accessing to the page you're testing. *NOTE* there's no need to configure parameter handling rules (see the images below).
