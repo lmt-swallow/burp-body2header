@@ -1,14 +1,14 @@
 # What does this extender do ?
-1. Store CSRF Tokens which satisfy the preset regex from macro/proxy responses automatically.
-2. Send CSRF Tokens with the stored token with a custom HTTP Header (this feature is not available with vanilla Burp Suite Professional).
+1. Store values which satisfy the preset regex from macro/proxy responses automatically.
+2. Send the stored values with the stored token with a custom HTTP Header (this feature is not available with vanilla Burp Suite Professional).
 
 # How to use
 
 1. Install and enable this script with your Burp Suite Professional.
-2. Set the scope in which you want to send HTTP Header with CSRF Token by right-clicking in the some tabs or directly inputting regexp. (e.g. ```^https://shift-js.info:433/*``` . please make sure every scope includes a port.)
-3. Set the regexp which matches the source of CSRF Tokens of the website you're testing.
+2. Set the scope in which you want to send HTTP Header with the stored values by right-clicking in the some tabs or directly inputting regexp. (e.g. ```^https://shift-js.info:433/*``` . please make sure every scope includes a port.)
+3. Set the regexp which matches the source of values you want to send in the header.
 4. If necessary, set the custom header name with which you want to send a token in the HTTP header.
-5. Set a macro which makes Burp to access to the source of the CSRF Token before accessing to the page you're testing. *NOTE* there's no need to configure parameter handling rules (see the images below).
+5. Set a macro which makes Burp to access to the source of the value before accessing to the page you're testing. *NOTE* there's no need to configure parameter handling rules (see the images below).
 6. Have happy testing :-)
 
 Here's a sample for this PHP script put on https://shift-js.info/test/test.php (now this link is invalid):
@@ -29,7 +29,7 @@ echo '<br />Here\'s your new token: ' . $_SESSION['csrf-token'];
 |:--:|
 |2: Add to the scope from Target tab (This can be done in other tabs)|
 
-|![Step 3, 4](img/step3-4.png "Set parameters to fetch a CSRF Token and send it in the HTTP header and enable/disable the extender separately for each tool")|
+|![Step 3, 4](img/step3-4.png "Set parameters to fetch a value you want to send in the HTTP header, and enable/disable the extender separately for each tool")|
 |:--:|
 |3,4: Set parameters to fetch a CSRF Token and send it in the HTTP header and enable/disable the extender separately for each tool|
 
