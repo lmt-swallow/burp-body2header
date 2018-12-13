@@ -222,7 +222,7 @@ class BurpExtender(IBurpExtender, ITab, IHttpListener, AbstractTableModel, ICont
             128:  JCheckBox('Sequencer'),
             1024: JCheckBox('Extender')
         }
-        checkboxes_components = {0: dict(zip(range(1,len(self._checkboxes)), self._checkboxes.values()))}
+        checkboxes_components = {0: dict(zip(range(1,len(self._checkboxes) + 1), self._checkboxes.values()))}
 
         self._label_value_regex_now_1 = JLabel("(1) Regex for the value to store: ")
         self._label_value_regex_now_2 = JLabel("")
